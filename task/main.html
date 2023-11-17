@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body
+        {
+            background-color: black;
+            color: white;
+        }
+        .main
+        {
+            width: auto;
+            height: auto;
+            background-color: black;
+           
+        }
+       
+      .logo
+      {
+            width: 70px;
+            height: 70px;
+            margin: 20px;
+      }
+      .cart
+      {
+        width: 30px;
+        height: 30px;
+        margin-right: 20px;
+        margin-left: -100px;
+        cursor: pointer;
+        
+      }
+      .menu
+      {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        margin-left: -50px;
+        cursor: pointer;
+      }
+      .profile
+      {
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        
+      }
+.main .header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+    .header p {
+      margin-left:-175px ;
+      display: inline-block; 
+      cursor: pointer;
+    }
+.main .header input {
+  width: 500px;
+  height: 30px;
+  border-radius: 10px;
+  padding-left: 10px;
+}
+.header input {
+      padding: 5px;
+      padding-right: 25px; 
+      background-image: url(./image/serach.png); 
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 50px; 
+    }
+   
+    .dropdown label
+    {
+      margin: 20px;
+    }
+    .content
+     {
+      width: auto;
+      display: flex;
+     }
+     .picture
+     {
+      width: auto;
+      margin: 50px;
+     }
+     .picture img
+     {
+      width: 500px;
+      height: 500px;
+     }
+     .small_pic
+     {
+      margin: 25px 25px 25px 60px;
+     }
+     .small_pic img
+     {
+      width: 75px;
+      height: 75px;
+      margin: 10px;
+     }
+     .pic-content
+     {
+      width: 60%;
+      height: 100vh;
+      margin-left: 100px;
+      margin-top: 50px;
+      overflow: scroll;
+      
+     }
+     body::-webkit-scrollbar 
+      {
+      width: 0.5em; 
+      }
+     body::-webkit-scrollbar-thumb
+     {
+      background-color: transparent;
+     }
+     .body::-webkit-scrollbar-track 
+     {
+      background-color: transparent; 
+     }
+     .pic-content::-webkit-scrollbar 
+      {
+      width: 0.5em; 
+      }
+     .pic-content::-webkit-scrollbar-thumb
+     {
+      background-color: transparent;
+     }
+     .pic-content::-webkit-scrollbar-track 
+     {
+      background-color: transparent; 
+     }
+      
+     .index
+     {
+     font-size: larger;
+     
+     }
+     .button1,.button2
+     {
+      color: white;
+      background-color: black;
+      border: 2px solid white;
+      border-radius: 10px;
+      padding: 10px;
+     }
+     .button2
+     {
+      margin-left: 10px;
+     }
+     .price 
+     {
+      display: flex;
+      flex-direction: row;
+     }
+     .offer
+     {
+      width: 50px;
+      height: 50px;
+      margin-right: 250px;
+      margin-left: 50px;
+      margin-top:11px ;
+     }
+     .drop
+    {
+      color: orangered;
+      margin-right:40px;
+    }
+    .actualamount
+    {
+      margin-left: 40px;
+    }
+    input[type="radio"] {
+      display: none;
+    }
+
+    
+    .compare {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .compare::before 
+    {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px; 
+      height: 20px; 
+      border-radius: 5px;
+      margin-left: -30px;
+      border: 2px solid white; 
+      background-color: black;
+    }
+   .comp
+   {
+    margin-top: 35px;
+    margin-right: 10px;
+   }
+   .num
+   {
+    text-decoration: line-through;
+    text-decoration-color: red;
+    text-decoration-thickness: 2px;
+   }
+    .num1
+    {
+      font-size: larger;
+    }
+    .keys
+    {
+      margin-top: 10px;
+    }
+    .features
+    {
+      
+      font-size: large;
+      font-weight: 700;
+    }
+    .keys ul li
+    {
+      margin-top: 10px;
+      margin-left: -10px;
+    }
+    .extra
+    {
+      margin-top: 10px;
+    }
+    .savings
+    {
+     
+      font-size: large;
+      font-weight: 700;
+    }
+    .offers
+    {
+      margin: 20px;
+      background-color: white;
+      border-radius: 15px;
+      width: 25%;
+      height: auto;
+      color: black;
+    }
+    .offers img
+    {
+      width: 25px;
+      height: 25px;
+    }
+    .offers1
+    {
+      margin: 20px;
+      background-color: white;
+      border-radius: 15px;
+      width: 25%;
+      color: black;
+    }
+    .offers1 img
+    {
+      width: 25px;
+      height: 25px;
+    }
+    .offers2
+    {
+      margin: 20px;
+      background-color: white;
+      border-radius: 15px;
+      width: 25%;
+      color: black;
+    }
+    .offers2 img
+    {
+      width: 25px;
+      height: 25px;
+    }
+    .banks
+    {
+      display: flex;
+    }
+    .zip
+    {
+      margin-top: 10px;
+    }
+    .plan
+    {
+      font-size: large;
+      font-weight: 700;
+    }
+    .radio {
+      display: inline-block;
+      position: relative;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .radio::before 
+    {
+      content: '';
+      display: inline-block;
+      position: absolute;
+      transform: translateY(-50%);
+      width: 20px; 
+      height: 20px; 
+      border-radius: 15px;
+      border: 2px solid white; 
+      background-color: black;
+    }
+    .protectionplan .warranty
+    {
+     margin-left: 100px;
+     margin-right: 150px;
+    }
+    .alter
+    {
+      margin-left: 20px;
+      text-decoration: line-through;
+      text-decoration-line: 2px;
+      text-decoration-color: red;
+    }
+    .buy
+    {
+      background-color: red;
+      color: white;
+      border-radius: 7px;
+      border: 2px solid black;
+      height: 40px;
+      width: 120px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .addtocart
+    {
+      background-color: black;
+      color: white;
+      border-radius: 7px;
+      border: 2px solid white;
+      height: 40px;
+      width: 120px;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .specification
+    {
+      width: 95%;
+      height: auto;
+      padding: 40px;
+      
+    }
+    
+     .vertical-hr 
+     {
+       display: inline-block;
+       height: 100px; 
+       width: 1px; 
+       background-color: #ccc; 
+       margin: 0 10px; 
+      }
+     .specification h2
+     {
+      margin-bottom: 20px;
+     }
+     .specification h3
+     {
+      margin-bottom: 30px;
+     }
+     .sepc-content
+     {
+      padding: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+     }
+     .anothercon
+     {
+      padding: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content:space-between;
+      margin-right: 400px;
+     }
+     .wall
+     {
+      margin-left: 110px;
+      margin-right: 190px;
+     }
+     .manu-content
+     {
+      padding: 25px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-right: 120px;
+     }
+     .viewbtn
+     {
+      margin-top: 50px;
+     margin-left: 550px;
+     width: 150px;
+     height: 50px;
+     border-radius: 10px;
+     cursor: pointer;
+
+     }
+     .overview
+    {
+      width: 95%;
+      height: auto;
+      padding: 40px;
+     
+    }
+    .showcase
+    {
+      width: 95%;
+      height: auto;
+      padding: 40px;
+      
+     
+    }
+    .view
+    {
+      width: 95%;
+      height: auto;
+      display: flex;
+      justify-content: space-between;
+      margin-left:0px;
+    }
+    
+    .firstover
+    {
+      width: 50%;
+    }
+    .secondover
+    {
+      width: 50%;
+    }
+    .firstover ul li
+    {
+      margin-left: -18px;
+    }
+    .product
+    {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+    
+
+    }
+    .lglogo
+    {
+      width: 50px;
+      height: 50px;
+    }
+    .imgshowcase
+    {
+      width: 85%;
+      height: 90vh;
+      margin-right:100px ;
+    }
+    .similar
+    {
+      width: 95%;
+      height: auto;
+      padding: 40px;
+    }
+    .similarpic {
+      margin-top: 30px;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      width: 100%; 
+    }
+
+    .similarpic img {
+      width: 300px;
+      height: 250px;
+    margin-left:  50px;
+    margin-right: 50px;
+    }
+    .overlay-text {
+      width: 300px;
+      position: absolute;
+      top: 80%;
+      left: 200px;
+      transform: translate(-50%, -50%);
+      color: black;
+    
+      text-align: center;
+    }
+    .overlay-text1 {
+      width: 300px;
+      position: absolute;
+      top: 80%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      color: black;
+    
+      text-align: center;
+    }
+    .overlay-text2 {
+      width: 300px;
+      position: absolute;
+      top: 80%;
+      left: 85%;
+      transform: translate(-50%, -50%);
+      color: black;
+      
+      text-align: center;
+    }
+    .simi
+    
+    {
+      font-size: 20px;
+      font-weight: bold;
+      color: orangered;
+    }
+    .footer
+    {
+      
+      width: auto;
+      height: auto;
+      padding: 40px;
+      background-color:#3B3B3B;
+      padding-left: 50px;
+
+    }
+    .flex
+    {
+      display: flex;
+      justify-content: space-between;
+    }
+    .footpic
+    {
+      width: 100px;
+    }
+    .footpic img
+    {
+      margin-top: 10px;
+      width: 25px;
+      height: 25px;
+      cursor: pointer;
+      
+    }
+    .footer input
+    {
+    margin-top: 10px;
+    width: 250px;
+    height: 50px;
+    }
+    .connect
+    {
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .stores
+    {
+      
+      margin-top: -20px;
+      margin-left: -50px;
+    }
+    .footproducts
+    {
+      
+      margin-top: -20px;
+    }
+    .footproducts h4
+    {
+      margin-left: 100px;
+    } h4
+    {
+      margin-left: 100px;
+    }
+    .stores h4
+    {
+      margin-left: 100px;
+    }
+    .places
+    {
+      display: flex;
+      
+    }
+    .places label
+    {
+      margin-left: 100px;
+    }
+    .finalproducts
+    {
+      display: flex;
+      
+    }
+    .finalproducts label
+    {
+      margin-left: 100px;
+    }
+   .number
+   {
+    margin-left: 100px;
+   }
+   .footimg input {
+      padding: 5px;
+      padding-right: 20px; 
+      background-image: url(./image/send.png); 
+      background-repeat: no-repeat;
+      background-position: right center;
+      background-size: 25px; 
+    }
+    .copyright
+    {
+      color: #ccc;
+      text-align: center;
+    }
+    .secondover
+    {
+      margin-top: 40px;
+    }
+    </style>
+</head>
+<body>
+
+<div class="main">
+          <div class="header">
+            <img src="./image/logo.jpg" class="logo" >
+            <img src="./image/menu.png" class="menu"><p>MENU</p>
+            <input type="text" name="serach" placeholder="serach" >
+            <img src="./image/profile.png" class="profile">
+            <img src="./image/cart.png" class="cart">
+           </div>
+             <hr>
+               <div class="dropdown">
+                  <label >Home</label>  >  <label> Home Appliances</label>  >  <label> Air Conditioners</label>
+                </div>
+              <hr>
+                <div class="content">
+                                               <div class="picture">
+                                                  <img src="./image/acfront.jpg" alt="">
+                                                        <div class="small_pic">
+                                                          <img src="./image/ac side.jpg" alt="">
+                                                          <img src="./image/acsidefront.avif" alt="">
+                                                          <img src="./image/rightside.avif" alt="">
+                                                        </div>
+                                                </div>
+
+                                            <div class="pic-content">
+                                                 <p class="index">  LG 1.5 Ton 3 Star Inverter Split AC (5-in-1 Convertible,<br> Copper Condenser, PS-Q19PNXE, White)</p>
+                                                  <button class="button1">2022 Model</button> <button class="button2">STD Installation @ Rs.1,119+GST</button>
+                                                <div class="price">
+                                                      <p class="drop">PriceDrop  <br><br> <label class="num1">28,990.00</label></p> <hr>
+                                                      <p class="actualamount">MRP <br><br> <label class="num"> 45,990.00</label> </p> 
+                                                      <img src="./image/offer.jpg" class="offer">
+                                                     <label class="compare"><input type="radio" name="compare"  value="compare"> <p class="comp">Compare<p></label>
+                                                </div>
+                                                       <div class="keys">
+                                                          <label class="features">Key Features</label>
+                                                          <hr>
+                                                           <ul>
+                                                             <li>1.5 Ton | Inverter Split AC</li>
+                                                             <li>Approximate Coverage Area - 180 Sq.Ft (16.7 Sq.M)</li>
+                                                             <li>Dimension: IDU – 83.7 x 18.9 x 30.8 cms | ODU -77.0 x 28.8 x 5a</li>
+                                                             <li>Dual Rotary Compressor | Cooling Capacity - 5000 Watts</li>
+                                                              <li>Copper Coil Condenser</li>
+                                                              <li>12 Months Warranty | 10 Years Compressor Warranty</li>
+                                                           </ul>
+
+                                                        </div>
+                                                              <div class="extra">
+                                                                 <label class="savings">Extra Savings (6 Offers)</label>
+                                                                  <hr>
+                                                                       <div class="banks"> 
+                                                                           <div class="offers">
+                                                                               <img src="./image/icic.jpg" alt=""> <label>ICIC Bank</label>
+                                                                                <hr>
+                                                                                 <p>split your bill in 3 for free with no cost EMI.offer available on product price 5,000 &more</p>
+                        
+                                                                            </div>
+                                                                         <div class="offers2">
+                                                                           <img src="./image/tataneu.jpg" alt=""> <label>Qik EMI Crad</label>
+                                                                            <hr>
+                                                                            <p>split your bill in 3 for free with no cost EMI.offer available on product price 5,000 &more</p>
+                        
+                                                                          </div>
+                                                                            <div class="offers1">
+                                                                              <img src="./image/icic.jpg" alt=""> <label>ICIC Bank</label>
+                                                                              <hr>
+                                                                              <p>split your bill in 3 for free with no cost EMI.offer available on product price 5,000 &more</p>
+                                                                            </div>
+                                                                        </div>
+                                                              </div>
+                                                                                <div class="zip">
+                                                                                  <label class="plan">Zip Protection Plan</label>
+                                                                                    <hr>
+                                                                                         <div class="protectionplan">
+                                                                                           <p>Extended warranty plans starting at Rs.3273(Approx Rs.273/mo.)<br><br>
+                                                                                            Extended protection for your device beyond the manufacturer warranty with coverage against all manufacturing defects. </p><br>
+                                                                                           <label class="radio"><input type="radio" name="" id=""><label class="warranty">1 Year Extended Warranty-Onsitego </label> Rs.3273 <label class="alter"> Rs.3050</label></label><br><br><br>
+                                                                                           <label class="radio"><input type="radio" name="" id=""><label class="warranty">2 Year Extended Warranty-Onsitego</label> Rs.4998 <label class="alter"> Rs.5880</label></label><br><br><br>
+                                                                                           <label class="radio"><input type="radio" name="" id=""><label class="warranty">3 Year Extended Warranty-Onsitego</label> Rs.8063  <label class="alter"> Rs.9485</label></label><br><br><br>
+                          
+                                                                                            <button class="buy">BUY NOW</button>  <button class="addtocart">ADD TO CART</button>
+
+                                                                                          </div>
+                                                                                </div>
+                                            </div>
+                  </div>
+
+                            <div class="specification">
+                              <h2>Specifications</h2>
+                                      <hr>
+                                          <h3>AIR CONDITIONER CATEGORY</h3>
+                                         
+                                          
+                                            <div class="sepc-content">
+                                               <label>Air Conditioner Type  <br> Split</label>
+                                               <span class="vertical-hr"></span>
+                                                <label>Air Conditioner Capacity <br>1.5 Ton </label>
+                                                <span class="vertical-hr"></span>
+                                                <label>Approximate Coverage Area(Sq.Ft)<br>180 Sq.Ft </label>
+                                            </div>
+                                            <br>
+                                            <div class="anothercon">
+                                                <label>Approximate Coverage Area(Sq.m)<br>16.7 Sq.m</label><br>
+                                                <span class="vertical-hr"></span>
+                                                <label class="wall">Installation Type<br>Wall Mount</label>
+                                                <span class="vertical-hr"></span>
+                                                
+                                        
+                                            </div>
+                                          <h3>MANUFRACTURER DETAILS</h3>
+                                            <div class="manu-content">
+                                                <label>Brand <br> LG</label>
+                                                <label>Model Series <br>PS-Q19PNXE </label>
+                                                <label>Model Number<br>PS-Q19PNXE  </label>
+                                            </div>
+                                            <button class="viewbtn">View more+</button>
+                            </div>
+                                 <div class="overview">
+                                   <h2>Overview</h2>
+                                      <hr>
+                                      <div class="view">
+                                         <div class="firstover">
+                                           <h3>Why buy LG 1.5 Ton 3 Star Inverter Split AC</h3>
+                                            <ul>
+                                                  <li>Dual Rotary Compressor enables long-lasting usage</li><br>
+                                        
+                                                  <li>Anti Virus Filter helps in protecting from virus</li><br>
+                                                  <li>1.5 Ton Capacity gives perfect cooling experience</li><br>
+                                                   <li>1740 Watts cooling capacity power output</li><br>
+                                                   <li>R-32 Refrigerant ensures superior cooling</li><br>
+                                            </ul>
+
+                                          </div>
+                                          <div class="secondover">
+                                               <p>Feel the chilled temperature inside your room when you buy LG 1.5 Ton 3 Star Inverter Split AC. The AC comes with an anti-virus filter which helps in filtering the dust and virus, offering fresh air intake which makes it more efficient. Having a 441 Airflow feature enables you amazing</p>
+                                           </div>
+                                       </div>
+                                    
+
+                                  </div>
+
+                                  <div class="showcase">
+                                  <h2> Product Showcase</h2>
+                                  <hr>
+                                       <div class="product">
+                                         <img src="./image/lg logo.png" class="lglogo">
+                                         <img src="./image/showcase.avif" class="imgshowcase">
+                                       </div>
+
+                                  </div>
+
+
+                                       <div class="similar">
+                                           <h2> Similar Product </h2>
+                                           <hr>
+                                           <div class="similarpic">
+                                            <img src="./image/lg ac.jpg" >
+                                            <div class="overlay-text">LG 1.5 Ton 3 Star Inverter Split AC(5-in-1 Convertible)<br> <label class="simi">Rs.47,990.00</label></div>
+                                            <img src="./image/lg ac.jpg" >
+                                            <div class="overlay-text1">LG 1.5 Ton 3 Star Inverter Split AC(5-in-1 Convertible)<br> <label class="simi">Rs.47,990.00</label></div>
+                                            <img src="./image/lg ac.jpg" >
+                                            <div class="overlay-text2">LG 1.5 Ton 3 Star Inverter Split AC(5-in-1 Convertible)<br> <label class="simi">Rs.47,990.00</label></div>
+                                           </div>
+
+                                        </div>
+
+                                        <div class="footer">
+                                            <div class="flex">
+                                              <div class="footimg">
+                                                      <label class="connect" >Connect With Us</label><br>
+                                                       <input type="text" placeholder="Enter the Eail ID" ><br>
+                                                        <div class="footpic">
+                                                           <img src="./image/face.png" alt="">
+                                                           <img src="./image/insta.png" alt="">
+                                                           <img src="./image/youtube.jpg" alt="">
+                                                         </div>
+                                              </div>
+                                                         <hr>
+                                                         <div class="stores">
+                                                            <h4>Stores</h4>
+                                                            <div class="places">
+                                                            <label>Adyar | 91762 02397<br><br>
+                                                                    Ambattur | 98415 07039<br><br>
+                                                                    Anna Nagar | 99400 84927 <br><br>
+                                                                    Chrompet | 91766 53177 <br><br>
+                                                                    Mount Road | 91762 06973 <br><br>
+                                                                    Mylapore | 98841 96166<br><br>
+                                                                    Navalur | 98849 33901<br><br>
+                                                                   </label>
+                                                                   <label>
+                                                                    OMR 99402 88561<br><br>
+                                                                    Porur | 97898 97539<br><br>
+                                                                    T Nagar 98840 00257 <br><br>
+                                                                    Valasaravakkam | 98845 90433<br><br>
+                                                                    Velachery | 98841 32910<br><br>
+                                                                    Customer Care 78240 10000<br><br>
+                                                                    <hr>
+                                                                    <h2> Customer Care</h2>
+                                                                    7824010000
+                                                                  </label>
+                                                                   
+                                                            </div>
+                                                            
+                                                         </div>
+<hr>
+                                                         <div class="footproducts">
+                                                         <h4>Products</h4>
+                                                         <div class="finalproducts">
+                                                         <label>
+                                                         Televisions<br><br>
+                                                          Air Conditioner<br><br>
+                                                         Refrigerator<br><br>
+                                                         Washing Machine<br><br>
+                                                        Air Cooler<br><br>
+                                                        Mobile<br><br>
+                                                        Home Theater<br><br>
+                                                        Microwave Oven<br><br>
+                                                        Juicer Mixer Grinders<br><br>
+                                                        </label>
+                                                                   <label>
+                                                        Gas Stove<br><br>
+                                                       Rice Cookers<br><br>
+                                                        Wet Grinders<br><br>
+                                                         </label>
+
+                                                         </div>
+                                                        
+
+                                                         </div>
+                                                       
+                                            </div>
+                                                 
+                                            <hr>
+                                            <p class="copyright">Copyright 2019 S.C.SHAH & CO PVT LTD. All Right Reserved.</p>
+                                        </div>
+                                        
+
+</div>
+   
+</body>
+</html>
+
+                                           
+                                           
+                                           
